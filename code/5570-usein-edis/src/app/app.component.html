@@ -1,0 +1,42 @@
+<!-- The navigation should be moved to a header component -->
+<nav class="navbar">
+  <div class="container navbar-container">
+    <a routerLink="/" class="navbar-brand">
+      <h1>Movie Management</h1>
+    </a>
+    <ul class="navbar-nav">
+      @for (route of routes; track $index) {
+        <li class="nav-item">
+          <a  [routerLink]="route.url" routerLinkActive="active" class="nav-link">{{route.linkName}}</a>
+        </li>
+      }
+      <li class="nav-item">
+        <a href="https://github.com/sweko/internet-programming-redingortm/blob/main/docs/task.md" 
+          class="nav-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Task Description</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="main-content">
+  <div class="container">
+    <h3>{{ welcomeMessage }}</h3>
+    <p>{{ statusMessage}}</p>
+    <router-outlet></router-outlet>
+  </div>
+</main>
+
+<!-- This should be moved to a footer component -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <p>&copy; {{currentYear}} Movie Management System</p>
+      <p>Student: <span>Your Name</span> | ID: <span>12345</span></p>
+      <a routerLink="/about" class="footer-link">About</a>
+    </div>
+  </div>
+</footer>

@@ -232,7 +232,7 @@ The statistics page should display the following information:
 - Total number of actors
 - Total number of genres
 - Total number of oscars
-- A list of oscars per type (tyoe and number of oscars, e.g. `Best Picture: 10`)
+- A list of oscars per type (type and number of oscars, e.g. `Best Picture: 10`)
 - A list of oscars per genre (genre and number of oscars, e.g. `Drama: 10`)
 - Number of movies per decade (decade and number of movies, e.g. `2010s: 10`)
 - Number of movies per genre (genre and number of movies, e.g. `Drama: 10`)
