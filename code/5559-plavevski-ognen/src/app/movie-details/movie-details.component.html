@@ -1,0 +1,16 @@
+
+<div *ngIf="movie">
+  <h2>{{movie.title}}</h2>
+  <p><strong>ID:</strong> {{movie.id}}</p>
+  <p><strong>Year:</strong> {{movie.year}}</p>
+  <p><strong>Plot:</strong> {{movie.plot}}</p>
+  <p><strong>Director:</strong> {{movie.director}}</p>
+  <p><strong>Genre:</strong> {{movie.genre.join(', ')}}</p>
+  <p><strong>Rating:</strong> {{movie.rating}}</p>
+  <p><strong>Cast:</strong></p>
+  <ul>
+    <li *ngFor="let castMember of movie.cast">{{castMember.actor}} as {{castMember.role}}</li>
+  </ul>
+  <button [routerLink]="['/movies', movie.id, 'edit']">Edit</button>
+  <button>Delete</button>
+</div>
