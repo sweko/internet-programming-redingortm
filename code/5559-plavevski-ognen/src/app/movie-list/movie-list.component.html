@@ -1,0 +1,32 @@
+<h2>Movies</h2>
+<button routerLink="/movies/create">Add Movie</button>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Director</th>
+      <th>Genre</th>
+      <th>Oscars</th>
+      <th>Rating</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movie of movies">
+      <td>{{movie.id}}</td>
+      <td>{{movie.title}}</td>
+      <td>{{movie.year}}</td>
+      <td>{{movie.director}}</td>
+      <td>{{movie.genre.join(' / ')}}</td>
+      <td>{{ (movie.oscars | keyvalue)?.length }}</td>
+      <td>{{movie.rating}}</td>
+      <td>
+        <button [routerLink]="['/movies', movie.id]">View</button>
+        <button [routerLink]="['/movies', movie.id, 'edit']">Edit</button>
+        <button (click)="deleteMovie(movie.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

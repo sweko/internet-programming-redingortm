@@ -1,0 +1,33 @@
+<div *ngIf="movie">
+  <h2>Edit Movie</h2>
+  <form>
+    <p><strong>ID:</strong> {{movie.id}}</p>
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" id="title" [(ngModel)]="movie.title" name="title" required>
+    </div>
+    <div>
+      <label for="year">Year:</label>
+      <input type="number" id="year" [(ngModel)]="movie.year" name="year" required>
+    </div>
+    <div>
+      <label for="plot">Plot:</label>
+      <textarea id="plot" [(ngModel)]="movie.plot" name="plot"></textarea>
+    </div>
+    <div>
+      <label for="director">Director:</label>
+      <input type="text" id="director" [(ngModel)]="movie.director" name="director" required>
+    </div>
+    <div>
+      <label for="genre">Genre:</label>
+      <select id="genre" [(ngModel)]="movie.genre" name="genre" multiple>
+        <option *ngFor="let genre of genres" [value]="genre">{{genre}}</option>
+      </select>
+    </div>
+    <div>
+      <label for="rating">Rating:</label>
+      <input type="number" id="rating" [(ngModel)]="movie.rating" name="rating">
+    </div>
+    <button type="button" (click)="saveMovie()">Save</button>
+  </form>
+</div>
