@@ -1,0 +1,47 @@
+<div>
+  <h2>Movies List</h2>
+
+  <div class="filters">
+    <input type="text" placeholder="Filter by Title" [(ngModel)]="filterTitle" (input)="applyFilters()" />
+    <input type="number" placeholder="Filter by Year" [(ngModel)]="filterYear" (input)="applyFilters()" />
+    <select [(ngModel)]="filterGenre" (change)="applyFilters()">
+      <option value="">All Genres</option>
+      <option *ngFor="let genre of genres" [value]="genre.id">{{ genre.name }}</option>
+    </select>
+    <input type="number" placeholder="Filter by Rating" [(ngModel)]="filterRating" (input)="applyFilters()" />
+  </div>
+
+  <button routerLink="/movies/create">Add Movie</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th (click)="setSort('id')">ID {{ getSortArrow('id') }}</th>
+        <th (click)="setSort('title')">Title {{ getSortArrow('title') }}</th>
+        <th (click)="setSort('year')">Year {{ getSortArrow('year') }}</th>
+        <th (click)="setSort('director')">Director {{ getSortArrow('director') }}</th>
+        <th (click)="setSort('genre')">Genre {{ getSortArrow('genre') }}</th>
+        <th (click)="setSort('oscars')">Oscars {{ getSortArrow('oscars') }}</th>
+        <th (click)="setSort('rating')">Rating {{ getSortArrow('rating') }}</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of filteredMovies">
+        <td>{{ movie.id }}</td>
+        <td>{{ movie.title }}</td>
+        <td>{{ movie.year }}</td>
+        <td>{{ movie.director }}</td>
+        <td>{{ movie.genre.join(' / ') }}</td>
+        <td>{{ movie.oscars | keyvalue | length }}</td>
+        <td>{{ movie.rating }}</td>
+        <td>
+          <button [routerLink]="['/movies', movie.id]">View</button>
+          <button [routerLink]="['/movies', movie.id, 'edit']">Edit</button>
+          <button (click)="deleteMovie(movie.id)">Delete</button>
+          <button [routerLink]="['/movies', movie.id, 'cast', 'add']">Add Cast</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

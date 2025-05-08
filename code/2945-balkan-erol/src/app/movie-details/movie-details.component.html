@@ -1,0 +1,51 @@
+<div *ngIf="movie">
+  <h2>{{ movie.title }} ({{ movie.year }})</h2>
+  <p><strong>ID:</strong> {{ movie.id }}</p>
+  <p><strong>Plot:</strong> {{ movie.plot }}</p>
+  <p><strong>Director:</strong> {{ movie.director }}</p>
+  <p><strong>Genres:</strong></p>
+  <ul>
+    <li *ngFor="let g of movie.genre">{{ g }}</li>
+  </ul>
+  <p><strong>Oscars:</strong></p>
+  <ul>
+    <li *ngFor="let oscar of movie.oscars | keyvalue | orderBy: 'key'">
+      {{ formatOscarName(oscar.key) }}: {{ oscar.value }}
+    </li>
+  </ul>
+  <p><strong>Rating:</strong> {{ movie.rating }}</p>
+  <p><strong>Cast:</strong></p>
+  <ul>
+    <li *ngFor="let c of movie.cast | sortByActorName">
+      <a *ngIf="actorsMap.has(c.actor)" [routerLink]="['/actor', actorsMap.get(c.actor)?.id]">{{ c.actor }}</a>
+      <span *ngIf="!actorsMap.has(c.actor)">{{ c.actor }}</span>
+      as {{ c.character }}
+    </li>
+  </ul>
+
+  <h3>Actions</h3>
+  <button [routerLink]="['/movies', movie.id, 'edit']">Edit</button>
+  <button (click)="deleteMovie()">Delete</button>
+  <button [routerLink]="['/movies', movie.id, 'cast', 'add']">Add Cast</button>
+
+  <h3>Similar Movies by Genre</h3>
+  <ul>
+    <li *ngFor="let m of similarMoviesByGenre">
+      <a [routerLink]="['/movies', m.id]">{{ m.title }}</a>
+    </li>
+  </ul>
+
+  <h3>Similar Movies by Director</h3>
+  <ul>
+    <li *ngFor="let m of similarMoviesByDirector">
+      <a [routerLink]="['/movies', m.id]">{{ m.title }}</a>
+    </li>
+  </ul>
+
+  <h3>Similar Movies by Actor</h3>
+  <ul>
+    <li *ngFor="let m of similarMoviesByActor">
+      <a [routerLink]="['/movies', m.id]">{{ m.title }}</a>
+    </li>
+  </ul>
+</div>

@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/sweko/internet-programming-ryqxsdgvax#readme",
   "devDependencies": {
+    "@angular-devkit/build-angular": "^19.2.11",
     "@types/chalk": "^0.4.31",
     "@types/node": "^22.10.5",
     "tsx": "^4.19.2",

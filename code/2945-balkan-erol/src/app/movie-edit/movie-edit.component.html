@@ -1,0 +1,48 @@
+<div *ngIf="movieForm">
+  <h2>Edit Movie</h2>
+  <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>ID:</label>
+      <input formControlName="id" readonly />
+    </div>
+    <div>
+      <label>Title:</label>
+      <input formControlName="title" required />
+    </div>
+    <div>
+      <label>Year:</label>
+      <input type="number" formControlName="year" required />
+    </div>
+    <div>
+      <label>Plot:</label>
+      <textarea formControlName="plot"></textarea>
+    </div>
+    <div>
+      <label>Director:</label>
+      <input formControlName="director" required />
+    </div>
+    <div>
+      <label>Genres:</label>
+      <div *ngFor="let genre of genres; let i = index">
+        <input type="checkbox" [formControl]="genreControls[i]" />
+        {{ genre.name }}
+      </div>
+    </div>
+    <div>
+      <label>Rating:</label>
+      <input type="number" formControlName="rating" />
+    </div>
+    <div>
+      <label>Oscars:</label>
+      <div formArrayName="oscars">
+        <div *ngFor="let oscar of oscarsControls; let i = index" [formGroupName]="i">
+          <input formControlName="type" placeholder="Oscar Type" required />
+          <input formControlName="recipient" placeholder="Recipient" required />
+          <button type="button" (click)="removeOscar(i)">Remove</button>
+        </div>
+      </div>
+      <button type="button" (click)="addOscar()">Add Oscar</button>
+    </div>
+    <button type="submit" [disabled]="movieForm.invalid">Save</button>
+  </form>
+</div>
