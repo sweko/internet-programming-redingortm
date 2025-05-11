@@ -1,59 +1,85 @@
-# Template
+# Movie Management System
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+A web application for managing movies, actors, and related data. Built with Angular and JSON Server.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- View, create, edit, and delete movies
+- View actor details and their filmography
+- Filter and sort movies by various criteria
+- View statistics about the movie database
+- Responsive design for all screen sizes
 
-```bash
-ng serve
-```
+## Technologies Used
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular 19.1.5
+- JSON Server for backend API
+- Bootstrap 5 for styling
+- TypeScript
+- HTML/CSS
 
-## Code scaffolding
+## Getting Started
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Prerequisites
 
-```bash
-ng generate component component-name
-```
+- Node.js (v18 or higher)
+- npm (v9 or higher)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Installation
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+1. Clone the repository
+2. Install dependencies:
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
+### Running the Application
 
-For end-to-end (e2e) testing, run:
+To start both the frontend and backend servers concurrently:
 
 ```bash
-ng e2e
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+This will start:
+- Angular frontend at http://localhost:4200
+- JSON Server backend at http://localhost:3000
 
-## Additional Resources
+### Running Separately
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+To run the frontend only:
+
+```bash
+npm run start:front
+```
+
+To run the backend only:
+
+```bash
+npm run start:back
+```
+
+## Project Structure
+
+- `src/app/components/` - Angular components
+- `src/app/services/` - Services for API communication
+- `src/app/models/` - TypeScript interfaces
+- `db/` - JSON data for the backend
+
+## API Endpoints
+
+- `GET /movies` - Returns a list of movies
+- `GET /movies/:id` - Returns a single movie by id
+- `POST /movies` - Creates a new movie
+- `PUT /movies/:id` - Updates an existing movie
+- `DELETE /movies/:id` - Deletes an existing movie
+- `GET /genres` - Returns a list of genres
+- `GET /actors` - Returns a list of actors
+- `GET /actors/:id` - Returns a single actor by id
+- `GET /actors?name=<actor-name>` - Returns a single actor by full name
+
+## Author
+
+- Student ID: 5570
+- Student Name: Usein Edis

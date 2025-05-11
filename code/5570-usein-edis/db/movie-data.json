@@ -1,7 +1,7 @@
 {
   "movies": [
     {
-      "id": 3,
+      "id": "3",
       "title": "The Godfather",
       "year": 1972,
       "director": "Francis Ford Coppola",
@@ -37,7 +37,7 @@
       "rating": 9.2
     },
     {
-      "id": 33,
+      "id": "33",
       "title": "The Shawshank Redemption",
       "year": 1994,
       "director": "Frank Darabont",
@@ -71,7 +71,7 @@
       "rating": 9.3
     },
     {
-      "id": 54,
+      "id": "54",
       "title": "Schindler's List",
       "year": 1993,
       "director": "Steven Spielberg",
@@ -108,7 +108,7 @@
       "rating": 8.9
     },
     {
-      "id": 39,
+      "id": "39",
       "title": "Pulp Fiction",
       "year": 1994,
       "director": "Quentin Tarantino",
@@ -157,7 +157,7 @@
       "rating": 8.9
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "The Dark Knight",
       "year": 2008,
       "director": "Christopher Nolan",
@@ -192,7 +192,7 @@
       "rating": 9
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Fargo",
       "year": 1996,
       "director": "Joel Coen",
@@ -251,7 +251,7 @@
       "rating": 8.1
     },
     {
-      "id": 43,
+      "id": "43",
       "title": "Taxi Driver",
       "year": 1976,
       "director": "Martin Scorsese",
@@ -284,7 +284,7 @@
       "rating": 8.3
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "The Good, the Bad and the Ugly",
       "year": 1966,
       "director": "Sergio Leone",
@@ -313,7 +313,7 @@
       "rating": 8.8
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Reservoir Dogs",
       "year": 1992,
       "director": "Quentin Tarantino",
@@ -371,7 +371,7 @@
       "rating": 8.3
     },
     {
-      "id": 52,
+      "id": "52",
       "title": "The Usual Suspects",
       "year": 1995,
       "director": "Bryan Singer",
@@ -422,7 +422,7 @@
       "rating": 8.5
     },
     {
-      "id": 27,
+      "id": "27",
       "title": "A Clockwork Orange",
       "year": 1971,
       "director": "Stanley Kubrick",
@@ -468,7 +468,7 @@
       "rating": 8.3
     },
     {
-      "id": 21,
+      "id": "21",
       "title": "Seven",
       "year": 1995,
       "director": "David Fincher",
@@ -502,7 +502,7 @@
       "rating": 8.6
     },
     {
-      "id": 30,
+      "id": "30",
       "title": "The Princess Bride",
       "year": 1987,
       "director": "Rob Reiner",
@@ -552,7 +552,7 @@
       "rating": 8.1
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "The Wizard of Oz",
       "year": 1939,
       "director": "Victor Fleming",
@@ -606,7 +606,7 @@
       "rating": 8
     },
     {
-      "id": 55,
+      "id": "55",
       "title": "Amadeus",
       "year": 1984,
       "director": "Milos Forman",
@@ -643,7 +643,7 @@
       "rating": 8.3
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "The King's Speech",
       "year": 2010,
       "director": "Tom Hooper",
@@ -679,7 +679,7 @@
       "rating": 8
     },
     {
-      "id": 22,
+      "id": "22",
       "title": "Titanic",
       "year": 1997,
       "director": "James Cameron",
@@ -724,7 +724,7 @@
       "rating": 7.8
     },
     {
-      "id": 34,
+      "id": "34",
       "title": "Forrest Gump",
       "year": 1994,
       "director": "Robert Zemeckis",
@@ -760,7 +760,7 @@
       "rating": 8.8
     },
     {
-      "id": 41,
+      "id": "41",
       "title": "The Matrix",
       "year": 1999,
       "director": "The Wachowskis",
@@ -794,7 +794,7 @@
       "rating": 8.7
     },
     {
-      "id": 48,
+      "id": "48",
       "title": "Gladiator",
       "year": 2000,
       "director": "Ridley Scott",
@@ -831,7 +831,7 @@
       "rating": 8.5
     },
     {
-      "id": 23,
+      "id": "23",
       "title": "Goodfellas",
       "year": 1990,
       "director": "Martin Scorsese",
@@ -866,7 +866,7 @@
       "rating": 8.7
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Saving Private Ryan",
       "year": 1998,
       "director": "Steven Spielberg",
@@ -921,7 +921,7 @@
       "rating": 8.6
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "Fight Club",
       "year": 1999,
       "director": "David Fincher",
@@ -953,7 +953,7 @@
       "rating": 8.8
     },
     {
-      "id": 35,
+      "id": "35",
       "title": "Inception",
       "year": 2010,
       "director": "Christopher Nolan",
@@ -988,7 +988,7 @@
       "rating": 8.8
     },
     {
-      "id": 32,
+      "id": "32",
       "title": "The Lion King",
       "year": 1994,
       "director": "Roger Allers, Rob Minkoff",
@@ -1023,7 +1023,7 @@
       "rating": 8.5
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "The Empire Strikes Back",
       "year": 1980,
       "director": "Irvin Kershner",
@@ -1080,7 +1080,7 @@
       "rating": 8.7
     },
     {
-      "id": 44,
+      "id": "44",
       "title": "Jurassic Park",
       "year": 1993,
       "director": "Steven Spielberg",
@@ -1116,7 +1116,7 @@
       "rating": 8.1
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Braveheart",
       "year": 1995,
       "director": "Mel Gibson",
@@ -1153,7 +1153,7 @@
       "rating": 8.3
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "E.T. the Extra-Terrestrial",
       "year": 1982,
       "director": "Steven Spielberg",
@@ -1188,7 +1188,7 @@
       "rating": 7.8
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "The Shining",
       "year": 1980,
       "director": "Stanley Kubrick",
@@ -1221,7 +1221,7 @@
       "rating": 8.4
     },
     {
-      "id": 51,
+      "id": "51",
       "title": "12 Angry Men",
       "year": 1957,
       "director": "Sidney Lumet",
@@ -1286,7 +1286,7 @@
       "rating": 9
     },
     {
-      "id": 50,
+      "id": "50",
       "title": "Raiders of the Lost Ark",
       "year": 1981,
       "director": "Steven Spielberg",
@@ -1321,7 +1321,7 @@
       "rating": 8.4
     },
     {
-      "id": 24,
+      "id": "24",
       "title": "Jaws",
       "year": 1975,
       "director": "Steven Spielberg",
@@ -1356,7 +1356,7 @@
       "rating": 8
     },
     {
-      "id": 25,
+      "id": "25",
       "title": "The Terminator",
       "year": 1984,
       "director": "James Cameron",
@@ -1389,7 +1389,7 @@
       "rating": 8
     },
     {
-      "id": 46,
+      "id": "46",
       "title": "Back to the Future",
       "year": 1985,
       "director": "Robert Zemeckis",
@@ -1427,43 +1427,7 @@
       "rating": 8.5
     },
     {
-      "id": 1,
-      "title": "The Departed",
-      "year": 2006,
-      "director": "Martin Scorsese",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Thriller"
-      ],
-      "plot": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
-      "cast": [
-        {
-          "actor": "Leonardo DiCaprio",
-          "character": "Billy Costigan"
-        },
-        {
-          "actor": "Matt Damon",
-          "character": "Colin Sullivan"
-        },
-        {
-          "actor": "Jack Nicholson",
-          "character": "Frank Costello"
-        },
-        {
-          "actor": "Mark Wahlberg",
-          "character": "Staff Sgt. Sean Dignam"
-        }
-      ],
-      "oscars": {
-        "bestPicture": "The Departed",
-        "bestDirector": "Martin Scorsese",
-        "bestAdaptedScreenplay": "William Monahan"
-      },
-      "rating": 8.5
-    },
-    {
-      "id": 8,
+      "id": "8",
       "title": "The Prestige",
       "year": 2006,
       "director": "Christopher Nolan",
@@ -1498,7 +1462,7 @@
       "rating": 8.5
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "The Sixth Sense",
       "year": 1999,
       "director": "M. Night Shyamalan",
@@ -1532,7 +1496,7 @@
       "rating": 8.1
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "A Beautiful Mind",
       "year": 2001,
       "director": "Ron Howard",
@@ -1569,7 +1533,7 @@
       "rating": 8.2
     },
     {
-      "id": 45,
+      "id": "45",
       "title": "The Revenant",
       "year": 2015,
       "director": "Alejandro González Iñárritu",
@@ -1605,7 +1569,7 @@
       "rating": 8
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Apocalypse Now",
       "year": 1979,
       "director": "Francis Ford Coppola",
@@ -1674,7 +1638,7 @@
       "rating": 8.4
     },
     {
-      "id": 40,
+      "id": "40",
       "title": "The Graduate",
       "year": 1967,
       "director": "Mike Nichols",
@@ -1708,7 +1672,7 @@
       "rating": 8
     },
     {
-      "id": 49,
+      "id": "49",
       "title": "The Breakfast Club",
       "year": 1985,
       "director": "John Hughes",
@@ -1749,7 +1713,7 @@
       "rating": 7.8
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "The Sound of Music",
       "year": 1965,
       "director": "Robert Wise",
@@ -1785,7 +1749,7 @@
       "rating": 8
     },
     {
-      "id": 36,
+      "id": "36",
       "title": "The Grand Budapest Hotel",
       "year": 2014,
       "director": "Wes Anderson",
@@ -1869,7 +1833,7 @@
       "rating": 8.1
     },
     {
-      "id": 29,
+      "id": "29",
       "title": "Inglourious Basterds",
       "year": 2009,
       "director": "Quentin Tarantino",
@@ -1947,7 +1911,7 @@
       "rating": 8.3
     },
     {
-      "id": 31,
+      "id": "31",
       "title": "Requiem for a Dream",
       "year": 2000,
       "director": "Darren Aronofsky",
@@ -1979,7 +1943,7 @@
       "rating": 8.3
     },
     {
-      "id": 47,
+      "id": "47",
       "title": "The Exorcist",
       "year": 1973,
       "director": "William Friedkin",
@@ -2011,7 +1975,7 @@
       "rating": 8
     },
     {
-      "id": 53,
+      "id": "53",
       "title": "2001: A Space Odyssey",
       "year": 1968,
       "director": "Stanley Kubrick",
@@ -2044,7 +2008,7 @@
       "rating": 8.3
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Casablanca",
       "year": 1942,
       "director": "Michael Curtiz",
@@ -2114,7 +2078,7 @@
       "rating": 8.5
     },
     {
-      "id": 38,
+      "id": "38",
       "title": "One Flew Over the Cuckoo's Nest",
       "year": 1975,
       "director": "Milos Forman",
@@ -2186,7 +2150,7 @@
       "rating": 8.7
     },
     {
-      "id": 42,
+      "id": "42",
       "title": "The Green Mile",
       "year": 1999,
       "director": "Frank Darabont",
@@ -2267,7 +2231,7 @@
       "rating": 8.6
     },
     {
-      "id": 37,
+      "id": "37",
       "title": "No Country for Old Men",
       "year": 2007,
       "director": "Joel and Ethan Coen",
@@ -2305,7 +2269,7 @@
       "rating": 8.1
     },
     {
-      "id": 26,
+      "id": "26",
       "title": "The Silence of the Lambs",
       "year": 1991,
       "director": "Jonathan Demme",
@@ -2344,7 +2308,7 @@
       "rating": 8.6
     },
     {
-      "id": 28,
+      "id": "28",
       "title": "A Streetcar Named Desire",
       "year": 1951,
       "director": "Elia Kazan",
@@ -2380,7 +2344,7 @@
       "rating": 8
     },
     {
-      "id": 56,
+      "id": "56",
       "title": "Everything Everywhere All at Once",
       "year": 2023,
       "director": "Daniel Kwan & Daniel Scheinert",
@@ -2418,10 +2382,10 @@
         "bestOriginalScreenplay": "Daniel Kwan & Daniel Scheinert",
         "bestFilmEditing": "Paul Rogers"
       },
-      "rating": 8.0
+      "rating": 8
     },
     {
-      "id": 57,
+      "id": "57",
       "title": "All Quiet on the Western Front",
       "year": 2023,
       "director": "Edward Berger",
@@ -2454,7 +2418,7 @@
       "rating": 7.8
     },
     {
-      "id": 58,
+      "id": "58",
       "title": "The Whale",
       "year": 2023,
       "director": "Darren Aronofsky",
@@ -2483,7 +2447,7 @@
       "rating": 7.1
     },
     {
-      "id": 59,
+      "id": "59",
       "title": "Oppenheimer",
       "year": 2024,
       "director": "Christopher Nolan",
@@ -2523,7 +2487,7 @@
       "rating": 8.4
     },
     {
-      "id": 60,
+      "id": "60",
       "title": "Poor Things",
       "year": 2024,
       "director": "Yorgos Lanthimos",
@@ -2557,7 +2521,7 @@
       "rating": 7.8
     },
     {
-      "id": 61,
+      "id": "61",
       "title": "The Zone of Interest",
       "year": 2024,
       "director": "Jonathan Glazer",
@@ -2661,7 +2625,7 @@
   ],
   "actors": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Harvey Keitel",
       "birthdate": "May 13, 1939",
       "height": 176,
@@ -2675,7 +2639,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Leonardo DiCaprio",
       "birthdate": "November 11, 1974",
       "height": 183,
@@ -2689,7 +2653,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Brad Pitt",
       "birthdate": "December 18, 1963",
       "height": 180,
@@ -2703,7 +2667,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Harrison Ford",
       "birthdate": "July 13, 1942",
       "height": 185,
@@ -2717,7 +2681,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Jack Nicholson",
       "birthdate": "April 22, 1937",
       "height": 177,
@@ -2731,7 +2695,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Marlon Brando",
       "birthdate": "April 3, 1924",
       "height": 175,
@@ -2745,7 +2709,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Tom Hanks",
       "birthdate": "July 9, 1956",
       "height": 183,
@@ -2759,7 +2723,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Barry Pepper",
       "birthdate": "April 4, 1970",
       "height": null,
@@ -2773,7 +2737,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Bruce Willis",
       "birthdate": "March 19, 1955",
       "height": 183,
@@ -2787,7 +2751,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Christian Bale",
       "birthdate": "January 30, 1974",
       "height": 183,
@@ -2801,7 +2765,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Christopher Lloyd",
       "birthdate": "October 22, 1938",
       "height": 185,
@@ -2815,7 +2779,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Christopher Plummer",
       "birthdate": "December 13, 1929",
       "height": 178,
@@ -2829,7 +2793,7 @@
       ]
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Edward Norton",
       "birthdate": "August 18, 1969",
       "height": 183,
@@ -2843,7 +2807,7 @@
       ]
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Ellen Burstyn",
       "birthdate": "December 7, 1932",
       "height": 173,
@@ -2857,7 +2821,7 @@
       ]
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "F. Murray Abraham",
       "birthdate": "October 24, 1939",
       "height": 180,
@@ -2871,7 +2835,7 @@
       ]
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Helena Bonham Carter",
       "birthdate": "May 26, 1966",
       "height": 157,
@@ -2885,7 +2849,7 @@
       ]
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Jeff Goldblum",
       "birthdate": "October 22, 1952",
       "height": 193,
@@ -2899,7 +2863,7 @@
       ]
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Jennifer Connelly",
       "birthdate": "December 12, 1970",
       "height": 169,
@@ -2913,7 +2877,7 @@
       ]
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Jodie Foster",
       "birthdate": "November 19, 1962",
       "height": 160,
@@ -2927,7 +2891,7 @@
       ]
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Kevin Spacey",
       "birthdate": "July 26, 1959",
       "height": 178,
@@ -2941,7 +2905,7 @@
       ]
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Laurence Fishburne",
       "birthdate": "July 30, 1961",
       "height": 183,
@@ -2955,7 +2919,7 @@
       ]
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Mathieu Amalric",
       "birthdate": "October 25, 1965",
       "height": 167,
@@ -2969,7 +2933,7 @@
       ]
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Matt Damon",
       "birthdate": "October 8, 1970",
       "height": 178,
@@ -2983,7 +2947,7 @@
       ]
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Michael Caine",
       "birthdate": "March 14, 1933",
       "height": 188,
@@ -2997,7 +2961,7 @@
       ]
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Morgan Freeman",
       "birthdate": "June 1, 1937",
       "height": 188,
@@ -3011,7 +2975,7 @@
       ]
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "Ralph Fiennes",
       "birthdate": "December 22, 1962",
       "height": 180,
@@ -3025,7 +2989,7 @@
       ]
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Robert De Niro",
       "birthdate": "August 17, 1943",
       "height": 177,
@@ -3039,7 +3003,7 @@
       ]
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "Robert Duvall",
       "birthdate": "January 5, 1931",
       "height": 175,
@@ -3053,7 +3017,7 @@
       ]
     },
     {
-      "id": 29,
+      "id": "29",
       "name": "Robin Wright",
       "birthdate": "April 8, 1966",
       "height": 168,
@@ -3067,7 +3031,7 @@
       ]
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "Russell Crowe",
       "birthdate": "April 7, 1964",
       "height": 183,
@@ -3081,7 +3045,7 @@
       ]
     },
     {
-      "id": 31,
+      "id": "31",
       "name": "Scott Glenn",
       "birthdate": "January 26, 1941",
       "height": 183,
@@ -3095,7 +3059,7 @@
       ]
     },
     {
-      "id": 32,
+      "id": "32",
       "name": "Steve Buscemi",
       "birthdate": "December 13, 1957",
       "height": 173,
@@ -3109,7 +3073,7 @@
       ]
     },
     {
-      "id": 33,
+      "id": "33",
       "name": "Tim Roth",
       "birthdate": "May 14, 1961",
       "height": 168,
@@ -3123,7 +3087,7 @@
       ]
     },
     {
-      "id": 34,
+      "id": "34",
       "name": "Tom Hardy",
       "birthdate": "September 15, 1977",
       "height": 175,
@@ -3137,7 +3101,7 @@
       ]
     },
     {
-      "id": 35,
+      "id": "35",
       "name": "William Sadler",
       "birthdate": "April 13, 1950",
       "height": 180,
@@ -3151,7 +3115,7 @@
       ]
     },
     {
-      "id": 36,
+      "id": "36",
       "name": "Michelle Yeoh",
       "birthdate": "August 6, 1962",
       "height": 163,
@@ -3163,7 +3127,7 @@
       ]
     },
     {
-      "id": 37,
+      "id": "37",
       "name": "Ke Huy Quan",
       "birthdate": "August 20, 1971",
       "height": 170,
@@ -3175,7 +3139,7 @@
       ]
     },
     {
-      "id": 38,
+      "id": "38",
       "name": "Brendan Fraser",
       "birthdate": "December 3, 1968",
       "height": 191,
@@ -3187,7 +3151,7 @@
       ]
     },
     {
-      "id": 39,
+      "id": "39",
       "name": "Cillian Murphy",
       "birthdate": "May 25, 1976",
       "height": 175,
@@ -3199,7 +3163,7 @@
       ]
     },
     {
-      "id": 40,
+      "id": "40",
       "name": "Emma Stone",
       "birthdate": "November 6, 1988",
       "height": 168,
@@ -3211,7 +3175,7 @@
       ]
     },
     {
-      "id": 41,
+      "id": "41",
       "name": "Robert Downey Jr.",
       "birthdate": "April 4, 1965",
       "height": 174,

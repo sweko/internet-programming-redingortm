@@ -1,0 +1,138 @@
+<div class="container">
+  <h2 style="margin-top: 20px; margin-bottom:10px">Statistics</h2>
+
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Summary Card -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <h4>Summary</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Total Movies
+              <span class="badge bg-primary rounded-pill">{{ totalMovies }}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Total Actors
+              <span class="badge bg-primary rounded-pill">{{ totalActors }}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Total Genres
+              <span class="badge bg-primary rounded-pill">{{ totalGenres }}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Total Oscars
+              <span class="badge bg-primary rounded-pill">{{ totalOscars }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oscars by Type -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <h4>Oscars by Type</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let oscar of oscarsByType">
+              {{ oscar.type }}
+              <span class="badge bg-primary rounded-pill">{{ oscar.count }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oscars by Genre -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <h4>Oscars by Genre</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let genre of oscarsByGenre">
+              {{ genre.genre }}
+              <span class="badge bg-primary rounded-pill">{{ genre.count }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <!-- Movies by Decade -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <h4>Movies by Decade</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let decade of moviesByDecade">
+              {{ decade.decade }}
+              <span class="badge bg-primary rounded-pill">{{ decade.count }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Movies by Genre -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <h4>Movies by Genre</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let genre of moviesByGenre">
+              {{ genre.genre }}
+              <span class="badge bg-primary rounded-pill">{{ genre.count }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Actors Without Details -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <h4>Actors Without Details</h4>
+          <span class="badge bg-warning text-dark">{{ actorsWithoutDetails.length }}</span>
+        </div>
+        <div class="card-body">
+          <ul class="list-group" *ngIf="actorsWithoutDetails.length > 0">
+            <li class="list-group-item" *ngFor="let actor of actorsWithoutDetails">
+              {{ actor.name }}
+            </li>
+          </ul>
+          <div class="alert alert-success" *ngIf="actorsWithoutDetails.length === 0">
+            All actors have their details available!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <!-- Movies Without Details -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <h4>Movies Without Details</h4>
+          <span class="badge bg-warning text-dark">{{ moviesWithoutDetails.length }}</span>
+        </div>
+        <div class="card-body">
+          <ul class="list-group" *ngIf="moviesWithoutDetails.length > 0">
+            <li class="list-group-item" *ngFor="let movie of moviesWithoutDetails">
+              {{ movie.title }}
+            </li>
+          </ul>
+          <div class="alert alert-success" *ngIf="moviesWithoutDetails.length === 0">
+            All movies have their details available!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

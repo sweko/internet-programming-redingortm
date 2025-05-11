@@ -1,0 +1,119 @@
+<div class="container">
+  <h2 style="margin-top: 20px;">Movies</h2>
+
+  <div class="mb-4">
+    <button class="btn btn-primary" routerLink="/movies/create">Add New Movie</button>
+  </div>
+
+  <!-- Filters -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5>Filters</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <label for="titleFilter" class="form-label">Title</label>
+          <input type="text" class="form-control" id="titleFilter" [(ngModel)]="titleFilter" (input)="applyFilters()">
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="yearFilter" class="form-label">Year</label>
+          <input type="number" class="form-control" id="yearFilter" [(ngModel)]="yearFilter" (input)="applyFilters()">
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="genreFilter" class="form-label">Genre</label>
+          <select class="form-select" id="genreFilter" [(ngModel)]="genreFilter" (change)="applyFilters()">
+            <option value="">All Genres</option>
+            <option *ngFor="let genre of genres" [value]="genre.name">{{ genre.name }}</option>
+          </select>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="ratingFilter" class="form-label">Min Rating</label>
+          <input type="number" class="form-control" id="ratingFilter" [(ngModel)]="ratingFilter" min="0" max="10" step="0.1" (input)="applyFilters()">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Movies Table -->
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th (click)="sortMovies('id')">
+            ID
+            <span *ngIf="sortColumn === 'id'" class="sort-icon">
+              {{ sortDirection === 'asc' ? '↑' : '↓' }}
+            </span>
+          </th>
+          <th (click)="sortMovies('title')">
+            Title
+            <span *ngIf="sortColumn === 'title'" class="sort-icon">
+              {{ sortDirection === 'asc' ? '↑' : '↓' }}
+            </span>
+          </th>
+          <th (click)="sortMovies('year')">
+            Year
+            <span *ngIf="sortColumn === 'year'" class="sort-icon">
+              {{ sortDirection === 'asc' ? '↑' : '↓' }}
+            </span>
+          </th>
+          <th (click)="sortMovies('director')">
+            Director
+            <span *ngIf="sortColumn === 'director'" class="sort-icon">
+              {{ sortDirection === 'asc' ? '↑' : '↓' }}
+            </span>
+          </th>
+          <th (click)="sortMovies('genre')">
+            Genre
+            <span *ngIf="sortColumn === 'genre'" class="sort-icon">
+              {{ sortDirection === 'asc' ? '↑' : '↓' }}
+            </span>
+          </th>
+          <th (click)="sortMovies('oscars')">
+            Oscars
+            <span *ngIf="sortColumn === 'oscars'" class="sort-icon">
+              {{ sortDirection === 'asc' ? '↑' : '↓' }}
+            </span>
+          </th>
+          <th (click)="sortMovies('rating')">
+            Rating
+            <span *ngIf="sortColumn === 'rating'" class="sort-icon">
+              {{ sortDirection === 'asc' ? '↑' : '↓' }}
+            </span>
+          </th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movie of filteredMovies">
+          <td>{{ movie.id }}</td>
+          <td>{{ movie.title }}</td>
+          <td>{{ movie.year }}</td>
+          <td>{{ movie.director }}</td>
+          <td>{{ formatGenres(movie.genre) }}</td>
+          <td>{{ getOscarsCount(movie) }}</td>
+          <td>{{ movie.rating }}</td>
+          <td>
+            <div class="btn-group">
+              <a [routerLink]="['/movies', movie.id]" class="btn btn-sm btn-info">View</a>
+              <a [routerLink]="['/movies', movie.id, 'edit']" class="btn btn-sm btn-warning">Edit</a>
+              <button (click)="deleteMovie(movie.id)" class="btn btn-sm btn-danger">Delete</button>
+              <a [routerLink]="['/movies', movie.id, 'cast/add']" class="btn btn-sm btn-secondary">Add Cast</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="filteredMovies.length === 0" class="alert alert-info">
+    No movies found matching the current filters.
+  </div>
+
+  <!-- Success message -->
+  <div *ngIf="successMessage" class="alert alert-success alert-dismissible fade show mt-3">
+    {{ successMessage }}
+    <button type="button" class="btn-close" (click)="successMessage = ''" aria-label="Close"></button>
+  </div>
+</div>

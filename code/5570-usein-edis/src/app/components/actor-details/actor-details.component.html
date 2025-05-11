@@ -1,0 +1,79 @@
+<div class="container" *ngIf="actor">
+  <h2>{{ actor.name }}</h2>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h4>Actor Details</h4>
+        </div>
+        <div class="card-body">
+          <dl class="row">
+            <dt class="col-sm-3">ID</dt>
+            <dd class="col-sm-9">{{ actor.id }}</dd>
+
+            <dt class="col-sm-3">Name</dt>
+            <dd class="col-sm-9">{{ actor.name }}</dd>
+
+            <dt class="col-sm-3" *ngIf="actor.birthdate">Birthdate</dt>
+            <dd class="col-sm-9" *ngIf="actor.birthdate">{{ actor.birthdate }}</dd>
+
+            <dt class="col-sm-3" *ngIf="actor.height">Height</dt>
+            <dd class="col-sm-9" *ngIf="actor.height">{{ actor.height }} cm</dd>
+
+            <dt class="col-sm-3" *ngIf="actor.nationality">Nationality</dt>
+            <dd class="col-sm-9" *ngIf="actor.nationality">{{ actor.nationality }}</dd>
+          </dl>
+        </div>
+      </div>
+
+      <!-- Notable Works Section -->
+      <div class="card mb-4" *ngIf="actor.notable_works && actor.notable_works.length > 0">
+        <div class="card-header">
+          <h4>Notable Works</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let work of actor.notable_works">
+              <ng-container *ngIf="hasNotableMovie(work); else plainText">
+                <a [routerLink]="['/movies', getNotableMovieId(work)]">{{ work }}</a>
+              </ng-container>
+              <ng-template #plainText>{{ work }}</ng-template>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <!-- Movies Section -->
+      <div class="card mb-4" *ngIf="movies.length > 0">
+        <div class="card-header">
+          <h4>Movies in Database</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let movie of movies">
+              <a [routerLink]="['/movies', movie.id]">{{ movie.title }} ({{ movie.year }})</a>
+              <div class="text-muted small" *ngIf="movie.cast">
+                as {{ getCharacterName(movie, actor ? actor.name : '') }}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col">
+      <a routerLink="/movies" class="btn btn-secondary">Back to Movies</a>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="!actor">
+  <div class="alert alert-info">
+    Loading actor details...
+  </div>
+</div>

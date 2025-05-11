@@ -1,0 +1,11 @@
+.actor-suggestions {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
