@@ -1,0 +1,101 @@
+.about-card {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: none;
+}
+
+.profile-image-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.profile-icon {
+  font-size: 80px;
+}
+
+.info-section {
+  margin: 30px 0;
+}
+
+.info-item {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.info-content h5 {
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.info-content p {
+  margin-bottom: 0;
+}
+
+.project-section h4 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.project-section h4 i {
+  margin-right: 10px;
+}
+
+.feature-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.feature-list li i {
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+.tech-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.tech-badge {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.tech-badge i {
+  margin-right: 8px;
+}

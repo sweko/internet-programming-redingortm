@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card about-card">
+        <div class="card-header text-center">
+          <h2><i class="bi bi-info-circle"></i> About</h2>
+        </div>
+        <div class="card-body">
+          <div class="text-center mb-4">
+            <div class="profile-image-container">
+              <i class="bi bi-person-circle profile-icon"></i>
+            </div>
+            <h3 class="mt-3">{{ studentName }}</h3>
+            <p class="text-muted">Student Developer</p>
+          </div>
+
+          <div class="info-section">
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="bi bi-person-badge"></i>
+              </div>
+              <div class="info-content">
+                <h5>Student ID</h5>
+                <p>{{ studentId }}</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="bi bi-calendar-check"></i>
+              </div>
+              <div class="info-content">
+                <h5>Current Year</h5>
+                <p>{{ currentYear }}</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="bi bi-github"></i>
+              </div>
+              <div class="info-content">
+                <h5>GitHub Repository</h5>
+                <p><a [href]="githubRepo" target="_blank">{{ githubRepo }}</a></p>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="project-section">
+            <h4><i class="bi bi-film"></i> Project Description</h4>
+            <p>
+              This is a movie management system built with Angular and JSON Server. The application allows users to view, create, edit, and delete movies, as well as view actor details and statistics about the movie database.
+            </p>
+
+            <h4><i class="bi bi-check-circle"></i> Features</h4>
+            <ul class="feature-list">
+              <li><i class="bi bi-list-ul"></i> View a list of movies with sorting and filtering capabilities</li>
+              <li><i class="bi bi-info-circle"></i> View detailed information about each movie</li>
+              <li><i class="bi bi-pencil-square"></i> Create, edit, and delete movies</li>
+              <li><i class="bi bi-people"></i> View actor details and their filmography</li>
+              <li><i class="bi bi-bar-chart"></i> View statistics about the movie database</li>
+            </ul>
+
+            <h4><i class="bi bi-code-slash"></i> Technologies Used</h4>
+            <div class="tech-container">
+              <div class="tech-badge">
+                <i class="bi bi-filetype-tsx"></i> Angular 19.1.5
+              </div>
+              <div class="tech-badge">
+                <i class="bi bi-server"></i> JSON Server
+              </div>
+              <div class="tech-badge">
+                <i class="bi bi-bootstrap"></i> Bootstrap 5
+              </div>
+              <div class="tech-badge">
+                <i class="bi bi-filetype-ts"></i> TypeScript
+              </div>
+              <div class="tech-badge">
+                <i class="bi bi-filetype-html"></i> HTML/CSS
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

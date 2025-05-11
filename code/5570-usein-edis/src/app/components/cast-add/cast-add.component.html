@@ -1,0 +1,56 @@
+<div class="container" *ngIf="movie">
+  <h2>Add Cast Member to "{{ movie.title }}"</h2>
+
+  <div class="card mb-4">
+    <div class="card-header">
+      <h4>New Cast Member</h4>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="addCastMember()">
+        <div class="mb-3">
+          <label for="actor" class="form-label">Actor Name *</label>
+          <div class="position-relative">
+            <input type="text" class="form-control" id="actor" [(ngModel)]="newCastMember.actor" name="actor" required (input)="onActorInput()">
+            <div class="actor-suggestions" *ngIf="actorSuggestions.length > 0">
+              <div class="list-group">
+                <button type="button" class="list-group-item list-group-item-action" *ngFor="let actor of actorSuggestions" (click)="selectActor(actor)">
+                  {{ actor.name }}
+                </button>
+              </div>
+            </div>
+          </div>
+          <small class="form-text text-muted">Start typing to see suggestions from the actor database</small>
+        </div>
+
+        <div class="mb-3">
+          <label for="character" class="form-label">Character Name *</label>
+          <input type="text" class="form-control" id="character" [(ngModel)]="newCastMember.character" name="character" required>
+        </div>
+
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary me-2">Add Cast Member</button>
+          <a [routerLink]="['/movies', movie.id]" class="btn btn-secondary">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="card mb-4" *ngIf="movie.cast && movie.cast.length > 0">
+    <div class="card-header">
+      <h4>Current Cast</h4>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let castMember of movie.cast">
+          <strong>{{ castMember.actor }}</strong> as {{ castMember.character }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="!movie">
+  <div class="alert alert-info">
+    Loading movie...
+  </div>
+</div>

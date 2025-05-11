@@ -1,0 +1,105 @@
+<div class="container">
+  <h2>Create New Movie</h2>
+
+  <form (ngSubmit)="saveMovie()">
+    <div class="mb-3">
+      <label for="id" class="form-label">ID</label>
+      <input type="number" class="form-control" id="id" [(ngModel)]="movie.id" name="id" readonly>
+      <small class="text-muted">This ID is automatically generated</small>
+    </div>
+
+    <div class="mb-3">
+      <label for="title" class="form-label">Title *</label>
+      <input type="text" class="form-control" id="title" [(ngModel)]="movie.title" name="title" required
+             [class.is-invalid]="!movie.title && errorMessage">
+      <div class="invalid-feedback" *ngIf="!movie.title && errorMessage">Title is required</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="year" class="form-label">Year *</label>
+      <input type="number" class="form-control" id="year" [(ngModel)]="movie.year" name="year" required
+             [class.is-invalid]="!movie.year && errorMessage">
+      <div class="invalid-feedback" *ngIf="!movie.year && errorMessage">Year is required</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="director" class="form-label">Director *</label>
+      <input type="text" class="form-control" id="director" [(ngModel)]="movie.director" name="director" required
+             [class.is-invalid]="!movie.director && errorMessage">
+      <div class="invalid-feedback" *ngIf="!movie.director && errorMessage">Director is required</div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Genre *</label>
+      <div class="row" [class.is-invalid]="selectedGenres.length === 0 && errorMessage">
+        <div class="col-md-4" *ngFor="let genre of genres">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" [id]="'genre-' + genre.id"
+                  [checked]="selectedGenres.includes(genre.name)"
+                  (change)="toggleGenre(genre.name)">
+            <label class="form-check-label" [for]="'genre-' + genre.id">
+              {{ genre.name }}
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="invalid-feedback d-block" *ngIf="selectedGenres.length === 0 && errorMessage">
+        At least one genre must be selected
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="plot" class="form-label">Plot</label>
+      <textarea class="form-control" id="plot" [(ngModel)]="movie.plot" name="plot" rows="4"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="rating" class="form-label">Rating</label>
+      <input type="number" class="form-control" id="rating" [(ngModel)]="movie.rating" name="rating" min="0" max="10" step="0.1">
+    </div>
+
+    <!-- Oscars Section -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h4>Oscars</h4>
+      </div>
+      <div class="card-body">
+        <div *ngIf="movie.oscars && hasOscars(movie.oscars)">
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let oscar of movie.oscars | keyvalue">
+              <div>
+                <strong>{{ formatOscarName(oscar.key) }}:</strong> {{ oscar.value }}
+              </div>
+              <button type="button" class="btn btn-sm btn-danger" (click)="removeOscar(oscar.key)">Remove</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-5">
+            <input type="text" class="form-control" placeholder="Oscar Type (e.g. bestActor)" [(ngModel)]="newOscarType" name="newOscarType">
+          </div>
+          <div class="col-md-5">
+            <input type="text" class="form-control" placeholder="Recipient" [(ngModel)]="newOscarRecipient" name="newOscarRecipient">
+          </div>
+          <div class="col-md-2">
+            <button type="button" class="btn btn-primary w-100" (click)="addOscar()">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary me-2" [disabled]="isSubmitting">
+        <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>
+        {{ isSubmitting ? 'Saving...' : 'Save' }}
+      </button>
+      <a routerLink="/movies" class="btn btn-secondary">Cancel</a>
+    </div>
+  </form>
+
+  <!-- Error message -->
+  <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+    {{ errorMessage }}
+  </div>
+</div>

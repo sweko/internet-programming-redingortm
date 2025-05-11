@@ -1,0 +1,142 @@
+<div class="container" *ngIf="movie">
+  <div class="row mb-4">
+    <div class="col-md-8">
+      <h2>{{ movie.title }} ({{ movie.year }})</h2>
+    </div>
+    <div class="col-md-4 text-end">
+      <div class="btn-group">
+        <a [routerLink]="['/movies', movie.id, 'edit']" class="btn btn-warning">Edit</a>
+        <button (click)="deleteMovie()" class="btn btn-danger">Delete</button>
+        <a [routerLink]="['/movies', movie.id, 'cast/add']" class="btn btn-secondary">Add Cast</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h4>Movie Details</h4>
+        </div>
+        <div class="card-body">
+          <dl class="row">
+            <dt class="col-sm-3">ID</dt>
+            <dd class="col-sm-9">{{ movie.id }}</dd>
+
+            <dt class="col-sm-3">Title</dt>
+            <dd class="col-sm-9">{{ movie.title }}</dd>
+
+            <dt class="col-sm-3">Year</dt>
+            <dd class="col-sm-9">{{ movie.year }}</dd>
+
+            <dt class="col-sm-3">Director</dt>
+            <dd class="col-sm-9">{{ movie.director }}</dd>
+
+            <dt class="col-sm-3">Genre</dt>
+            <dd class="col-sm-9">
+              <ul class="list-unstyled">
+                <li *ngFor="let genre of movie.genre">{{ genre }}</li>
+              </ul>
+            </dd>
+
+            <dt class="col-sm-3">Plot</dt>
+            <dd class="col-sm-9">{{ movie.plot }}</dd>
+
+            <dt class="col-sm-3">Rating</dt>
+            <dd class="col-sm-9">{{ movie.rating }}</dd>
+          </dl>
+        </div>
+      </div>
+
+      <!-- Cast Section -->
+      <div class="card mb-4" *ngIf="movie.cast && movie.cast.length > 0">
+        <div class="card-header">
+          <h4>Cast</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let castMember of movie.cast">
+              <strong>
+                <a *ngIf="actors.has(castMember.actor)" [routerLink]="['/actor', actors.get(castMember.actor)?.id]">
+                  {{ castMember.actor }}
+                </a>
+                <span *ngIf="!actors.has(castMember.actor)">{{ castMember.actor }}</span>
+              </strong>
+              as {{ castMember.character }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oscars Section -->
+      <div class="card mb-4" *ngIf="movie.oscars && hasOscars(movie.oscars)">
+        <div class="card-header">
+          <h4>Oscars</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let oscar of movie.oscars | keyvalue">
+              <strong>{{ formatOscarName(oscar.key) }}:</strong> {{ oscar.value }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <!-- Similar Movies by Genre -->
+      <div class="card mb-4" *ngIf="similarMoviesByGenre.length > 0">
+        <div class="card-header">
+          <h4>Similar Movies by Genre</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let movie of similarMoviesByGenre">
+              <a [routerLink]="['/movies', movie.id]">{{ movie.title }} ({{ movie.year }})</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Similar Movies by Director -->
+      <div class="card mb-4" *ngIf="similarMoviesByDirector.length > 0">
+        <div class="card-header">
+          <h4>More by {{ movie.director }}</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let movie of similarMoviesByDirector">
+              <a [routerLink]="['/movies', movie.id]">{{ movie.title }} ({{ movie.year }})</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Similar Movies by Actor -->
+      <div class="card mb-4" *ngIf="similarMoviesByActor.length > 0">
+        <div class="card-header">
+          <h4>Movies with Same Actors</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let movie of similarMoviesByActor">
+              <a [routerLink]="['/movies', movie.id]">{{ movie.title }} ({{ movie.year }})</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col">
+      <a routerLink="/movies" class="btn btn-secondary">Back to Movies</a>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="!movie">
+  <div class="alert alert-info">
+    Loading movie details...
+  </div>
+</div>
