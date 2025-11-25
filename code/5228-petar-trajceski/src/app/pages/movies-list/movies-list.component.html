@@ -1,0 +1,42 @@
+<h2>Movies</h2>
+
+<button (click)="create()">Add Movie</button>
+
+<div *ngIf="isLoading">Loading movies...</div>
+<div *ngIf="errorMessage" style="color:red;">{{ errorMessage }}</div>
+
+<table *ngIf="!isLoading && movies.length > 0" border="1" cellpadding="6">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Director</th>
+      <th>Genres</th>
+      <th>Oscars</th>
+      <th>Rating</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let movie of movies">
+      <td>{{ movie.id }}</td>
+      <td>{{ movie.title }}</td>
+      <td>{{ movie.year }}</td>
+      <td>{{ movie.director }}</td>
+      <td>{{ movie.genre?.join(' / ') }}</td>
+      <td>{{ getOscarCount(movie) }}</td>
+      <td>{{ movie.rating }}</td>
+      <td>
+        <button (click)="view(movie)">View</button>
+        <button (click)="edit(movie)">Edit</button>
+        <button (click)="delete(movie)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="!isLoading && movies.length === 0">
+  No movies found.
+</div>

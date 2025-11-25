@@ -1,0 +1,60 @@
+{
+    "movies": [
+      {
+        "id": 1,
+        "title": "Inception",
+        "year": 2010,
+        "director": "Christopher Nolan",
+        "genre": ["Action", "Sci-Fi"],
+        "plot": "A thief who steals corporate secrets through dream-sharing technology.",
+        "cast": [
+          { "actor": "Leonardo DiCaprio", "character": "Cobb" },
+          { "actor": "Joseph Gordon-Levitt", "character": "Arthur" }
+        ],
+        "oscars": {
+          "bestCinematography": "Wally Pfister"
+        },
+        "rating": 8.8
+      },
+      {
+        "id": 2,
+        "title": "The Dark Knight",
+        "year": 2008,
+        "director": "Christopher Nolan",
+        "genre": ["Action", "Drama"],
+        "plot": "Batman fights the Joker in Gotham City.",
+        "cast": [
+          { "actor": "Christian Bale", "character": "Bruce Wayne / Batman" },
+          { "actor": "Heath Ledger", "character": "Joker" }
+        ],
+        "oscars": {
+          "bestSupportingActor": "Heath Ledger"
+        },
+        "rating": 9.0
+      }
+    ],
+    "genres": [
+      { "id": "Action", "name": "Action" },
+      { "id": "Drama", "name": "Drama" },
+      { "id": "Sci-Fi", "name": "Sci-Fi" }
+    ],
+    "actors": [
+      {
+        "id": 1,
+        "name": "Leonardo DiCaprio",
+        "birthdate": "November 11, 1974",
+        "height": 183,
+        "nationality": "American",
+        "notable_works": ["Inception", "Titanic"]
+      },
+      {
+        "id": 2,
+        "name": "Christian Bale",
+        "birthdate": "January 30, 1974",
+        "height": 183,
+        "nationality": "British",
+        "notable_works": ["The Dark Knight", "American Psycho"]
+      }
+    ]
+  }
+  
